@@ -4,10 +4,15 @@ pipeline {
      nodejs 'whateverwewant'
     }
     stages {
-        stage('Hello') {
+        stage('Build') {
             steps {
                 echo 'Hello World'
                 sh "npm install"
+            }
+        }
+        stage('Build') {
+            steps {
+                sh "npm test"
             }
         }
     }
