@@ -15,5 +15,14 @@ pipeline {
                 sh 'npm test'
             }
         }
+        // stage('Code Quality') {
+        //     steps {
+        //         script {
+        //            withSonarQubeEnv('sonar') {
+        //                sh "${tool('sonar')}/bin/sonar-scanner"
+        //            }
+        //         }
+        //     }
+        // }
     }
 }
