@@ -7,13 +7,22 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Hello World'
-                sh "npm install"
+                sh 'npm install'
             }
         }
         stage('Test') {
             steps {
-                sh "npm test"
+                sh 'npm test'
             }
         }
+        // stage('Code Quality') {
+        //     steps {
+        //         script {
+        //            withSonarQubeEnv('sonar') {
+        //                sh "${tool('sonar')}/bin/sonar-scanner"
+        //            }
+        //         }
+        //     }
+        // }
     }
 }
